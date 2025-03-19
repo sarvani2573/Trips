@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+   
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: white;
+   
+    
+  
+
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    height: 30px;
+    margin-right: 10px;
+}
+.logo span{
+
+    font-weight: bold;
+}
+.menu{
+    display: flex;
+    gap:30px;
+}
+.menu a {
+    text-decoration: none;
+    font-weight: bold;
+}
