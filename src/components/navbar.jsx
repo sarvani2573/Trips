@@ -1,13 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./navbar.css";
 import Button from "@mui/material/Button";
 
 const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="logo">
-        <img src="trip-logo.png" alt="Logo" />
+        <img src="/trip-logo.png" alt="Logo" />
         <span>Tripadvisor</span>
       </div>
 
@@ -17,10 +16,10 @@ const Navbar = () => {
         <Link to="/reviews">Reviews</Link>
       </div>
 
-      <div className="right-section" style={{ display: "flex", alignItems: "center", gap: "20px" }}>
-        <span> 🌍 | INR </span>
+      <div className="right-section">
+        <span>🌍 | INR</span>
         <Link to="/signin">
-          <Button variant="contained" style={{ borderRadius: '20px', backgroundColor: "black" }}>
+          <Button variant="contained" className="signin-btn">
             Sign in
           </Button>
         </Link>

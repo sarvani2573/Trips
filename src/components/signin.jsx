@@ -1,36 +1,30 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 
-const Signin =()=>{
-    const [name,setName]=useState("")
-    const [email, setEmail] = useState("");
+const Signin = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-    const handleSubmit =(e)=>{
-        e.preventDefault();
-    if(!name || !email || !password){
-        alert("please fill all feilds")
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!name || !email || !password) {
+      alert("Please fill all fields!");
+    } else {
+      alert(`Sign in successful\nName: ${name}\nEmail: ${email}`);
     }
-    else{
-        alert(`sign in successfull \nName: ${name} \nEmail: ${email}`)
-    }
+  };
 
-    }
+  return (
+    <form onSubmit={handleSubmit}>
+      <label>Name:</label>
+      <input type="text" value={name} onChange={(e) => setName(e.target.value)} required />
+      <label>Email:</label>
+      <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+      <label>Password:</label>
+      <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+      <button type="submit">Sign In</button>
+    </form>
+  );
+};
 
-    return(
-        <form onSubmit={handleSubmit}>
-            <label>Name:</label>
-            <input type="text" value={name} onChange={(e) => setName(e.target.value)}
-          required placeholder="type name here.."  style={{ width: "100%", padding: "8px", margin: "10px 0" }}/>
-
-            <label>Email:</label>
-            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="type email here"  style={{ width: "100%", padding: "8px", margin: "10px 0" }}/>
-
-            <label>Password:</label>
-            <input  type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="type password here"  style={{ width: "100%", padding: "8px", margin: "10px 0" }}/>
-            <button type="submit" style={{ width: "100%", padding: "10px", backgroundColor: "black", color: "white", border: "none", cursor: "pointer" }}>
-        Sign In
-      </button>
-        </form>
-    )
-}
-export default Signin
+export default Signin;

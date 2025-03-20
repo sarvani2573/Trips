@@ -12,59 +12,27 @@ import SearchIcon from "@mui/icons-material/Search";
 
 const Discover = () => {
   return (
-    <Box sx={{ pb: "100px" }}>
-      <Typography variant="h2" fontWeight="bold" margin="30px">
+    <Box className="discover">
+      <Typography variant="h2" fontWeight="bold">
         Where to?
       </Typography>
 
-  
-      <Box display="flex" justifyContent="center" gap="10px">
-        <Typography sx={{ display: "flex", alignItems: "center", cursor: "pointer" }}>
-          <HomeIcon /> Search All
-        </Typography>
-        <Typography sx={{ display: "flex", alignItems: "center", cursor: "pointer" }}>
-          <HotelIcon /> Hotels
-        </Typography>
-        <Typography sx={{ display: "flex", alignItems: "center", cursor: "pointer" }}>
-          <CameraAltIcon /> Things to Do
-        </Typography>
-        <Typography sx={{ display: "flex", alignItems: "center", cursor: "pointer" }}>
-          <RestaurantMenuIcon /> Restaurants
-        </Typography>
-        <Typography sx={{ display: "flex", alignItems: "center", cursor: "pointer" }}>
-          <FlightIcon /> Flights
-        </Typography>
-        <Typography sx={{ display: "flex", alignItems: "center", cursor: "pointer" }}>
-          <HolidayVillageIcon /> Holiday Homes
-        </Typography>
+      <Box className="category-icons">
+        <Typography><HomeIcon /> Search All</Typography>
+        <Typography><HotelIcon /> Hotels</Typography>
+        <Typography><CameraAltIcon /> Things to Do</Typography>
+        <Typography><RestaurantMenuIcon /> Restaurants</Typography>
+        <Typography><FlightIcon /> Flights</Typography>
+        <Typography><HolidayVillageIcon /> Holiday Homes</Typography>
       </Box>
 
-     
-      <Box display="flex" justifyContent="center" mt={2}>
-        <TextField
-          InputProps={{ startAdornment: <SearchIcon sx={{ color: "black" }} /> }}
-          placeholder="Places to go, things to do, hotels..."
-          variant="outlined"
-          sx={{ width: "500px", margin: "20px" }}
-        />
+      <Box className="search-box">
+        <TextField placeholder="Search places..." InputProps={{ startAdornment: <SearchIcon /> }} />
       </Box>
 
-      
-      <Box  width="100%" display="flex" justifyContent="center" mt={2}>
-        <img src="/trip-img.jpg" alt="trip-img" style={{width: "80%", borderRadius: "10px",boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.2)",}}/>
-
-        
-        <Box position="absolute" top="80%" left="55%">
-          <Typography variant="h5" fontWeight="bold">
-            Explore Amazing Destinations 🌍🗺️
-          </Typography>
-          <Typography variant="body1">
-            Discover the best places to visit, <br/>from breathtaking landscapes to vibrant cities.
-          </Typography>
-        </Box>
+      <Box className="discover-image">
+        <img src="/trip-img.jpg" alt="trip" />
       </Box>
-
-     
     </Box>
   );
 };
